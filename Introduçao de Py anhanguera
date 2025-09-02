@@ -1,0 +1,390 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMPLRIPdZqmYON4HtBZO/sA",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/JonasBRibeiro/firtsprojetc-/blob/main/Introdu%C3%A7ao%20de%20Py%20anhanguera\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 9,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "30kLe4oV4K9b",
+        "outputId": "ce0066fe-6d42-4b7d-a577-eb8ed7c2b875"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "idoso\n"
+          ]
+        }
+      ],
+      "source": [
+        "idade = 66\n",
+        "if idade < 18:\n",
+        "         print(\"Menor de Idade\")\n",
+        "elif idade >= 18 and idade <65:\n",
+        "            print(\"Adulto\")\n",
+        "else:\n",
+        "    print(\"idoso\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numeros = [1, 2, 3, 4, 5]\n",
+        "numeros"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_-GsBK4F93Pj",
+        "outputId": "b556cfb2-8f75-473f-a304-ad4e64bd1cf1"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 2, 3, 4, 5]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 15
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for num in numeros:\n",
+        "    print(num)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IwjjDTc072vb",
+        "outputId": "a7b8dd0e-51b3-493a-ae6a-850566e8db1d"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        ""
+      ],
+      "metadata": {
+        "id": "DNhvZlhz-OD6"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Bem-vindo à Máquina de Venda Automatica de Inglessos de Cinema!\n",
+        "\n",
+        "#Solicita a idade do cliente\n",
+        "idade = int(input(\"Por Favor , digite sua idade: \"))\n",
+        "\n",
+        "#Verifica a idade para sugestao de filmes\n",
+        "if idade < 12:\n",
+        "    print(\"Recomendamos o filme infantil FILME KIDS\")\n",
+        "elif 12 <= idade <18:\n",
+        "    print(\"Recomendamos o filme adolescente FILME ADOLS\")\n",
+        "else:\n",
+        "    print(\"Recomendamos o filme de terror FILME SCARY! \")\n",
+        "\n",
+        "\n",
+        "# Verifica a disponibilidade de ingressos\n",
+        "quantidade_ingressos = 10  #Suponha que haja 10 ingressos disponiveis\n",
+        "if quantidade_ingressos > 0:\n",
+        "       print(\"Ingressos estao disponives. Divirta-se no cinema! \")\n",
+        "else:\n",
+        "    print(\"Desculpe, todos os ingressos estao esgotados para hoje\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jElQgc1G5dAz",
+        "outputId": "7430ccba-67aa-4d71-c582-c25e73e5f3fa"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Por Favor , digite sua idade: 0\n",
+            "Recomendamos o filme infantil FILME KIDS\n",
+            "Ingressos estao disponives. Divirta-se no cinema! \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Lista de filmes para classificaçao\n",
+        "filmes = [\"Nemo\", \"Sherek\", \"Homen-Aranha\", \"One Piece\", \"Kimetsu no Aiba\"]\n",
+        "\n",
+        "#Mensagem de boas vindas\n",
+        "print(\"Bem-vindo à classificaçao de filmes\")\n",
+        "print(\"Voce tem cinco filmes para classificar.\")\n",
+        "print(\"Digite '0' a qualquer momento para parar. \\n\")\n",
+        "\n",
+        "#Loop para interar sobre cada filme na lista\n",
+        "for filme in filmes:\n",
+        "    #Solicita a classificaçao ao usuario\n",
+        "    classificaçao = input(f\"como voce classificaria '{filme}' de 1 a 5? (ou 0 para para): \")\n",
+        "\n",
+        "    #Verifica se o usuario deseja parar\n",
+        "    if classificaçao == '0':\n",
+        "      print(\"Que pena que voce nao ira classificar mais os filmes.\")\n",
+        "      break    # Encerra o loop principar\n",
+        "\n",
+        "# Converte a classificaçao para o numero inteiro\n",
+        "    classificaçao = int(classificaçao)\n",
+        "\n",
+        "    # Verifica se a classificaçao esta dentro do intervalo valido\n",
+        "    if classificaçao < 1 or classificaçao > 5:\n",
+        "     print(\"Por favor , digite uma classificaçao valida de 1 a 5 \")\n",
+        "    else:\n",
+        "        # Exibe a classificaçao e passa para proximo filme\n",
+        "        print(f\"Voce classificou '{filme}' com {classificaçao} estrelas. \\n\")\n",
+        "\n",
+        "#Mensagem de agradecimento ao finalizar\n",
+        "print(\"Obrigado por classifcar os filmes!\" )\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oKKS3IssDl07",
+        "outputId": "2e90cadc-611c-4b7a-f38b-7cc8a80a8021"
+      },
+      "execution_count": 55,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Bem-vindo à classificaçao de filmes\n",
+            "Voce tem cinco filmes para classificar.\n",
+            "Digite '0' a qualquer momento para parar. \n",
+            "\n",
+            "como voce classificaria 'Nemo' de 1 a 5? (ou 0 para para): 2\n",
+            "Voce classificou 'Nemo' com 2 estrelas. \n",
+            "\n",
+            "como voce classificaria 'Sherek' de 1 a 5? (ou 0 para para): 3\n",
+            "Voce classificou 'Sherek' com 3 estrelas. \n",
+            "\n",
+            "como voce classificaria 'Homen-Aranha' de 1 a 5? (ou 0 para para): 4\n",
+            "Voce classificou 'Homen-Aranha' com 4 estrelas. \n",
+            "\n",
+            "como voce classificaria 'One Piece' de 1 a 5? (ou 0 para para): 5\n",
+            "Voce classificou 'One Piece' com 5 estrelas. \n",
+            "\n",
+            "como voce classificaria 'Kimetsu no Aiba' de 1 a 5? (ou 0 para para): 5\n",
+            "Voce classificou 'Kimetsu no Aiba' com 5 estrelas. \n",
+            "\n",
+            "Obrigado por classifcar os filmes!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "bra7aey9Dmar"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "_g6mmsY4_KK4"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "rcIXuQAX_KOH"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numero = int(input(\"Digite um numero (ou 0 para sair):\"))\n",
+        "\n",
+        "while numero != 0:\n",
+        "\n",
+        "  if numero % 2 == 0:\n",
+        "    print(\"O numero é par\")\n",
+        "  else:\n",
+        "      print(\"O numero é impar.\")\n",
+        "  numero = int(input(\"Digite um numero (ou 0 para sair): \"))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 356
+        },
+        "id": "Wcyih0ja_KYf",
+        "outputId": "73e787b5-e49a-424f-f3de-caaa870eac4d"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "KeyboardInterrupt",
+          "evalue": "Interrupted by user",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-893506934.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mnumero\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Digite um numero (ou 0 para sair):\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      2\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[0;32mwhile\u001b[0m \u001b[0mnumero\u001b[0m \u001b[0;34m!=\u001b[0m \u001b[0;36m0\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      5\u001b[0m   \u001b[0;32mif\u001b[0m \u001b[0mnumero\u001b[0m \u001b[0;34m%\u001b[0m \u001b[0;36m2\u001b[0m \u001b[0;34m==\u001b[0m \u001b[0;36m0\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.12/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36mraw_input\u001b[0;34m(self, prompt)\u001b[0m\n\u001b[1;32m   1175\u001b[0m                 \u001b[0;34m\"raw_input was called, but this frontend does not support input requests.\"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1176\u001b[0m             )\n\u001b[0;32m-> 1177\u001b[0;31m         return self._input_request(\n\u001b[0m\u001b[1;32m   1178\u001b[0m             \u001b[0mstr\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mprompt\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1179\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_ident\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"shell\"\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.12/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36m_input_request\u001b[0;34m(self, prompt, ident, parent, password)\u001b[0m\n\u001b[1;32m   1217\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1218\u001b[0m                 \u001b[0;31m# re-raise KeyboardInterrupt, to truncate traceback\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1219\u001b[0;31m                 \u001b[0;32mraise\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Interrupted by user\"\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mfrom\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1220\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mException\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1221\u001b[0m                 \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mlog\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mwarning\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Invalid Message:\"\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mexc_info\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mTrue\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m: Interrupted by user"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for x in range(5): #Lembre-se que se o range começa em 0 e termina n-1\n",
+        "   print(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6LOhCz4qBTQq",
+        "outputId": "d6239198-7f15-4d22-cd3a-be6bd552c9c9"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for y in range(2, 7): #observe que aqui 0 7 nao entra no looping\n",
+        "   print(y)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Qmb7Q1edBTUA",
+        "outputId": "7fa8dde3-57b0-44b2-e855-ab209a40629a"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for z in range(1, 11, 2):   #observe que aqui 0 '' nao entra no looping\n",
+        "       print(z)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-w9tuqxuCAQ5",
+        "outputId": "942d45bc-850e-4ec8-cfb6-7cbfb4631cd9"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "3\n",
+            "5\n",
+            "7\n",
+            "9\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
